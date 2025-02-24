@@ -2,11 +2,12 @@
 #include "../stdlib/syscall.h"
 #include <stdio.h>
 
-void DG_Init()
+void DG_Init() 
 {
     clear_screen(COLOR_BLACK);
 
 }
+
 
 void DG_SleepMs(uint32_t ms)
 {}
@@ -21,8 +22,20 @@ uint32_t DG_GetTicksMs()
 
 void DG_DrawFrame(const uint8_t* buffer, int pitch) 
 {
+    if (!buffer) 
+    {
+        printf("ERROR: DG_DrawFrame received NULL buffer!\n");
+        return;
+    }
+    if (pitch <= 0 || pitch > 4096) 
+    {
+        //printf("ERROR: DG_DrawFrame received invalid pitch: %d\n", pitch);
+        return;
+    }
     draw_frame_doom(buffer, pitch);
 }
+
+
 
 
 

@@ -1,4 +1,4 @@
-ENTRY(_userstart)
+ENTRY(_doomstart)
 OUTPUT_FORMAT(binary)
 SECTIONS
 {
