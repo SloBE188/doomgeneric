@@ -25,19 +25,6 @@ uint32_t DG_GetTicksMs()
 
 void DG_DrawFrame() 
 {
-<<<<<<< HEAD
-    if (!buffer) 
-    {
-        printf("ERROR: DG_DrawFrame received NULL buffer!\n");
-        return;
-    }
-    if (pitch <= 0 || pitch > 4096) 
-    {
-        //printf("ERROR: DG_DrawFrame received invalid pitch: %d\n", pitch);
-        return;
-    }
-    draw_frame_doom(buffer, pitch);
-=======
 
     
     draw_frame_doom(I_VideoBuffer, 320);
@@ -75,7 +62,6 @@ static unsigned char convertToDoomKey(uint32_t scancode)
     }
 
     return key;
->>>>>>> working-doom
 }
 
 

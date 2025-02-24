@@ -38,11 +38,6 @@ $(OUTPUT): $(OBJDIR)/start.o $(OBJS)
 	-L$(HOME)/opt/cross/i686-elf/lib -lc \
 	-L../stdlib/build -lsenob \
 	-lgcc
-<<<<<<< HEAD
-
-=======
->>>>>>> working-doom
-
 
 
 $(OBJDIR)/%.o: %.c | $(OBJDIR)
