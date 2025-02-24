@@ -27,7 +27,9 @@ OBJS += $(addprefix $(OBJDIR)/, $(SRC_DOOM))
 all: $(OUTPUT)
 
 clean:
-	rm -rf $(OBJDIR) $(OUTPUT) $(OUTPUT).map
+	rm -rf $(OBJDIR)/doom.bin
+	rm -rf $(OBJDIR)/doom.bin.map
+	rm -rf $(OBJDIR)/start.o
 
 $(OUTPUT): $(OBJDIR)/start.o $(OBJS)
 	@echo [Linking $@]
@@ -36,11 +38,12 @@ $(OUTPUT): $(OBJDIR)/start.o $(OBJS)
 	-L$(HOME)/opt/cross/i686-elf/lib -lc \
 	-L../stdlib/build -lsenob \
 	-lgcc
+<<<<<<< HEAD
+
+=======
+>>>>>>> working-doom
 
 
-
-$(OBJDIR):
-	mkdir -p $(OBJDIR)
 
 $(OBJDIR)/%.o: %.c | $(OBJDIR)
 	@echo [Compiling $<]

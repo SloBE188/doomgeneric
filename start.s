@@ -11,5 +11,3 @@ _doomstart:
 
 loop:
     jmp loop
-
-

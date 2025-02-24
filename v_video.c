@@ -843,6 +843,11 @@ void V_ScreenShot(char *format)
 #define MOUSE_SPEED_BOX_WIDTH  120
 #define MOUSE_SPEED_BOX_HEIGHT 9
 
+double fabs(double x) 
+{
+    return x < 0 ? -x : x;
+}
+
 void V_DrawMouseSpeedBox(int speed)
 {
     extern int usemouse;
